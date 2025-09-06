@@ -1,13 +1,6 @@
 public class pgtoService {
-
-    public void processar(iFabricaPgto fabricaPgto, double valor){
-        try{
-            fabricaPgto.criar().pagar(valor);
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        
+    public void processar(iFabricaPgto fabrica, double valor) {
+        iPgto pagamento = fabrica.criarPagamento(); 
+        pagamento.pagar(valor);
     }
-
 }
