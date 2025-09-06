@@ -1,3 +1,3 @@
 public interface iFabricaPgto {
-    iPgto criar();
+    iPgto criar() throws Exception;
 }
